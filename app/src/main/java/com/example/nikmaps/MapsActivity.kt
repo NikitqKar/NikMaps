@@ -21,8 +21,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var lastLocation: Location
+    private lateinit var tapLocation: Location
     private lateinit var binding: ActivityMapsBinding
-    var listOfPoints = arrayListOf<LatLng>()
+    var listOfPoints = mutableListOf<LatLng>()
     companion object {
         private const val LOCATION_REQUEST_CODE = 1
     }
@@ -48,15 +49,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.setOnMapClickListener(object : GoogleMap.OnMapClickListener {
             override fun onMapClick(latlng: LatLng) {
 
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(latlng))
-                val tapLocation = LatLng(latlng.latitude, latlng.longitude)
-                mMap.addMarker(MarkerOptions().position(tapLocation))
+                    mMap.animateCamera(CameraUpdateFactory.newLatLng(latlng))
+                    val tapLocation = LatLng(latlng.latitude, latlng.longitude)
+                    mMap.addMarker(MarkerOptions().position(tapLocation))
                     googleMap.addPolyline(
-                    PolylineOptions()
-                        .clickable(true)
-                        .add(tapLocation,listOfPoints[0]
-                        ))
-            }
+                        PolylineOptions()
+                            .clickable(true)
+                            .add(
+                                tapLocation,
+                                listOfPoints[0]
+                            )
+                    )
+                }
 
         })
     }

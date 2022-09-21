@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "742360206486",
+    "project_id": "nikmaps-8e39b",
+    "storage_bucket": "nikmaps-8e39b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742360206486:android:325a43eadcdbd77125c6b7",
+        "android_client_info": {
+          "package_name": "com.example.nikmaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742360206486-vfqelgt7ore0p841ev8i4ko3d7sjj9cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSoEIaRCaih3zoqepXFddAKSnXpdz-3FA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742360206486-vfqelgt7ore0p841ev8i4ko3d7sjj9cv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
