@@ -108,14 +108,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         mMap.isMyLocationEnabled = true
         fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
-            if (location != null) {
+
                 lastLocation = location
                 val currentLatLong = LatLng(location.latitude, location.longitude)
                 listOfPoints.add(currentLatLong)
                 placeMarkerOnMap(currentLatLong)
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 12f))
 
-            }
+
         }
     }
 
